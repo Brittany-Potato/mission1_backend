@@ -54,7 +54,7 @@ if (!fs.existsSync(uploadDir)) {
 app.post("/upload", upload.single("file"), async (req, res) => {
   try {
     if (!req.file) {
-      return res.status(400).json({ errpr: "no file uploaded" });
+      return res.status(400).json({ error: "no file uploaded" });
     } //Defining the route and what file to expect i.e. "file"
       //Validating the file upload and responding witha 404 error if there is no file.
 
